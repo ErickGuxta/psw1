@@ -119,16 +119,9 @@ main{
     border-radius: 40px;
     box-sizing: border-box;
     box-shadow: 0 0 15px rgba(165, 165, 165, 0.3);
-
     
 }
 
-.conteudo form-registro{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-}
 
 .titulo{
     display: flex;
@@ -143,8 +136,6 @@ h2{
     font-size: 45px;
     letter-spacing: 4px;
 }
-
-
 
 
 .grupo{    
