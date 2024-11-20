@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Galdeano&family=League+Spartan:wght@100..900&familyOswald:wght@200..700&display=swap');
 
 *{
@@ -8,13 +7,14 @@
     text-decoration: none;
     box-sizing: border-box;
     font-family: "League Spartan", serif;
+    
 }
+
 
 body{
     background-color: #002B2B;
     width: 100%;
-    overflow-x: hidden;
-    
+    height: 100vh;
 }
 
 header{
@@ -99,7 +99,6 @@ header{
 /* CONTEUDO PRINCIPAL */
 
 main{
-    height:88%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -237,30 +236,153 @@ input[type="button"]:hover {
 
 /* IMAGEM MAIN */
 .imagem{
-    height: 100%;
+    height: auto;
     width: 25%;
 }
 .imagem img{
-    width: 120%;
+    width: 100%;
+    filter: drop-shadow(10px 0 30px #7EBFA1);
+    animation: flutuar 8s ease-in-out infinite;
+}
+
+@keyframes flutuar{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
 }
 
 
+/* RESPONSIVIDADE */
 
-@media  screen and (max-width: 768px) {
-    header{
-        height: auto;
-        padding: 15px;
-    }
-    main{
-        flex-direction: column; 
-        
-        .conteudo{
-            width: 100%;
-        }
-
-        .imagem{
-            width: 100%;
-        }
+/* Desktop First - Large devices */
+@media only screen and (max-width: 1200px) {
+    .navbar ul {
+        gap: 40px;
     }
     
+    .conteudo {
+        width: 80%;
+        padding: 30px;
+    }
 }
+
+/* Medium devices (tablets, 992px and down) */
+@media only screen and (max-width: 992px) {
+    .navbar ul {
+        gap: 25px;
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    .grupo {
+        flex-direction: column;
+    }
+
+    .item-grupo {
+        width: 100%;
+    }
+}
+
+/* Small devices (landscape phones, 768px and down) */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        gap: 15px;
+        text-align: center;
+    }
+
+    .botao-entrar {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    main {
+        flex-direction: row;
+        padding: 15px;
+    }
+
+    .conteudo {
+        width: 80%;
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .imagem {
+        display: none;
+    }
+}
+@media only screen and (max-width: 425px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .botao-entrar {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    main {
+        flex-direction: row;
+        padding: 15px;
+    }
+
+    .conteudo {
+        width: 100%;
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .imagem {
+        display: none;
+    }
+}
+
+/* Extra small devices (phones, 576px and down) */
+@media only screen and (max-width: 576px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .conteudo {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .grupo-botoes {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"] {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
