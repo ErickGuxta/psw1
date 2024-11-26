@@ -1,29 +1,58 @@
 <?php 
 
-$var = "bill gates";
-$tipo = gettype($var);
-echo "$var ($tipo) <br>";
+//variáveis e verificação de variáveis
 
-if (is_string($var)) {
-    echo "Isso é uma variável do tipo string";
-} else{
-    echo "Isso não é uma variável do tipo string";
-}
+    $var = "bill gates";
+    $tipo = gettype($var);
+    echo "$var ($tipo) <br>";
 
-echo "<br>";
+    if (is_string($var)) {
+        echo "Isso é uma variável do tipo string";
+    } else{
+        echo "Isso não é uma variável do tipo string";
+    }
 
-$var2 = true;
-if (is_bool($var2)) {
-    echo "Isso é uma variável do tipo boolean";
-} else{
-    echo "Isso não é uma variável do tipo boolean";
-}
+    echo "<br>";
 
-echo "<br>";
+    $var2 = true;
+    if (is_bool($var2)) {
+        echo "Isso é uma variável do tipo boolean";
+    } else{
+        echo "Isso não é uma variável do tipo boolean";
+    }
 
-$var3 = null;
+    echo "<br>";
 
-if (is_null($var3)) {
-    echo "Variavel \$var3 é nula/vazia! <br>";
-} 
+    $var3 = null;
+
+    if (is_null($var3)) {
+        echo "Variavel \$var3 é nula/vazia! <br>";
+    } 
+
+//array
+
+$nota = [1, 2, 3, 4];
+
+    //acesando índice
+    echo "Esse é o valor da posição 3: " . "$nota[3] <br>";
+
+    //imprimir valores vetor
+    for ($i = 0; $i < count($nota); $i++){
+        echo "$nota[$i]";
+    }
+
+    echo "<br>";
+
+    //usando foreach + codigo para não colocar virgula no final
+    $ultimo = end($nota);
+    foreach($nota as $i){
+        if($i == $ultimo){
+            echo "$i";
+        } else {
+            echo "$i" . ",";
+        }
+    }
+
+
+
 ?>
