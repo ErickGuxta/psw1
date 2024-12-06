@@ -22,10 +22,12 @@ header {
     width: 100%;
     height: 100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    padding: 0 80px;
 }
+
 
 h1 {
     color: #1bbe72;
@@ -35,38 +37,52 @@ h1 {
 
 }
 
+
 .sessao-direita-header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 20px;
+    gap: 8px;
 
-    .caixa1 {
-        width: 200px;
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .caixa2 {
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-
-        img {
-            border-radius: 50%;
-            width: 100%;
-            height: 100%;
-        }
-    }
 }
 
+.caixa1 {
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgs-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.imgs-logo img {
+    width: 25px;
+}
+
+.caixa2 {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa2 img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+/* sessão geral conteudo principal pagina */
 section {
     display: flex;
     flex-direction: row;
@@ -74,9 +90,9 @@ section {
     height: 75%;
 }
 
+/* menu lateral da pagina */
 aside {
     font-size: 18px;
-
     margin-top: 35px;
     width: 20%;
     display: flex;
@@ -84,13 +100,12 @@ aside {
     align-items: flex-start;
     flex-direction: column;
     padding: 40px 10px 30px 40px;
+}
 
-
-    nav {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 aside nav div {
@@ -113,6 +128,12 @@ aside nav div {
     .nav-item a {
         color: white;
     }
+
+    .nav-item a:hover {
+        color: #D9B573;
+    }
+
+
 }
 
 
@@ -120,15 +141,15 @@ aside nav div {
 main {
     width: 80%;
     margin-top: 35px;
+}
 
-    .conteudo {
-        padding: 25px 40px 25px 25px;
-        width: 95%;
-        height: 100%;
-        border-radius: 40px;
-        box-shadow: 0 0 15px rgba(165, 165, 165, 0.3);
-        color: #D9B573;
-    }
+.conteudo {
+    padding: 25px 40px 25px 25px;
+    width: 95%;
+    height: 100%;
+    border-radius: 40px;
+    box-shadow: 0 0 15px rgba(165, 165, 165, 0.3);
+    color: #D9B573;
 }
 
 .titulo {
@@ -142,20 +163,44 @@ main {
 
 .grupo {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    gap: 50px;
 }
+
+.grupo-teste {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
 
 .item-grupo {
     margin-bottom: 25px;
 }
 
+.item-grupo-tel-cpf {
+    margin-bottom: 25px;
+    width: 40%;
+}
+
+/* area dos checkbox */
+.sub-itens {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+
+    label {
+        color: #949494;
+    }
+}
+
 input[type="text"],
 input[type="tel"],
-select,
-textarea {
+select {
     width: 100%;
     margin-top: 10px;
     padding: 10px;
@@ -171,6 +216,37 @@ input::placeholder {
     opacity: 1;
 }
 
+.botao-enviar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1p solid rebeccapurple;
+}
+
+button {
+    margin-top: 25px;
+    padding: 8px;
+    width: 200px;
+    height: 35px;
+
+    border-style: none;
+    border: 1px solid #7EBFA1;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #1bbe72;
+
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+button:hover {
+    border: 1px solid rgb(255, 154, 154);
+    background-color: rgb(255, 154, 154);
+    color: #1f2428;
+}
+
+
 footer {
     margin-top: auto;
     display: flex;
@@ -181,20 +257,39 @@ footer {
     color: #D9B573;
 }
 
+
+
 /* STYLE PARA LISTA ALUNO */
+
+.conteudo-listaaluno {
+    width: 95%;
+    height: 100%;
+    border-radius: 40px;
+    box-shadow: 0 0 15px rgba(165, 165, 165, 0.3);
+    color: #D9B573;
+
+}
 
 .tabela-informacoes {
     width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
-    text-align: left;
+    text-align: center;
+    border-radius: 40px 40px 0 0;
+    overflow: hidden;
 }
 
-.tabela-informacoes th,
+.tabela-informacoes th {
+    border: 1px solid #7EBFA1;
+    padding: 12px;
+    color: #D9B573;
+}
+
 .tabela-informacoes td {
     border: 1px solid #7EBFA1;
-    padding: 10px;
+    padding: 12px;
     color: #D9B573;
+    font-size: 12;
 }
 
 .tabela-informacoes th {
@@ -210,4 +305,49 @@ footer {
 .tabela-informacoes tr:hover {
     background-color: #1bbe72;
     color: #1f2428;
+}
+
+
+/* STYLE PARA HOME */
+
+#header-home {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    gap: 200px;
+}
+
+#conteudo-principal {
+    width: 80%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.parte1 {
+    width: 70%;
+    height: 100%;
+    margin-top: 35px;
+    padding: 15px 40px 15px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.parte2 {
+    width: 30%;
+    height: 100%;
+    margin-top: 35px;
+    display: flex;
+    align-items: center
+}
+
+.parte2 img {
+    width: 100%;
 }
