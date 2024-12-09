@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
-    <title>Cadastrar</title>
+    <title>Home</title>
 </head>
 <body>
 
@@ -13,7 +13,7 @@
             <h1>PSW</h1>
         </div>
         <div class="logo">
-            <h1>SISTEMA CADASTRO</h1>
+            <h1>CADASTRO</h1>
         </div>
 
         <div class="sessao-direita-header">

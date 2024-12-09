@@ -292,6 +292,8 @@ footer {
     padding: 12px;
     color: #D9B573;
     font-size: 12;
+    word-wrap: break-word; 
+    max-width: 150px;
 }
 
 .tabela-informacoes th {

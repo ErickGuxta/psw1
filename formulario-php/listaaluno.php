@@ -2,9 +2,9 @@
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['limpar_sessao'])) {
-    session_unset(); // Remove todas as variáveis da sessão
-    session_destroy(); // Destroi a sessão
-    header("Location: listaaluno.php"); // Redireciona para a página atual
+    session_unset(); 
+    session_destroy(); 
+    header("Location: listaaluno.php"); 
     exit();
 }
 

@@ -135,7 +135,7 @@
                         </div>
                         <div class="item-grupo-tel-cpf">
                             <label for="cpf">CPF</label>
-                            <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00" maxlength="12">
+                            <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00" maxlength="14">
                         </div>
                     </div>
 
