@@ -36,16 +36,16 @@
                 <ul>
                     <div>
                         <span><img src="img/imagem-home.png" alt="imagem home"></span>
-                        <li class="nav-item"> <a href="index.html">Home</a></li>
+                        <li class="nav-item"> <a href="index.php">Home</a></li>
                     </div>
                     <div>
                         <span><img src="img/imagem-registro.png" alt="imagem registro"></span>
-                        <li class="nav-item"> <a href="cadaluno.html">Cadastrar Aluno</a></li>
+                        <li class="nav-item"> <a href="cadaluno.php">Cadastrar Aluno</a></li>
 
                     </div>
                     <div>
                         <span><img src="img/imgem-usuario.png" alt="imagem usuario"></span>
-                        <li class="nav-item"> <a href="listaaluno.html">Lista de Alunos</a></li>
+                        <li class="nav-item"> <a href="listaaluno.php">Lista de Alunos</a></li>
                     </div>
 
                     <div>
@@ -140,11 +140,11 @@
                             <label for="disciplinas">Disciplinas Cursadas</label>
                             <div class="sub-itens">
                                 <div>
-                                    <input type="checkbox" id="disciplina1" name="disciplinas" value="PSW">
+                                    <input type="checkbox" id="disciplina1" name="disciplinas" value="PSW" >
                                     <label for="disciplina1">PSW</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="disciplina2" name="disciplinas" value="BANCO DE DADOS">
+                                    <input type="checkbox" id="disciplina2" name="disciplinas" value="BANCO DE DADOS" >
                                     <label for="disciplina2">Banco de Dados</label>
                                 </div>
                                 <div>
@@ -183,7 +183,7 @@
                             <div class="sub-itens">
                                 <div>
                                     <input type="checkbox" id="favorita1" name="favoritas" value="PSW">
-                                    <label for="favorita1">PSW</label>
+                                    <label for="favorita1" >PSW</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="favorita2" name="favoritas" value="ASW">

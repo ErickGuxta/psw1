@@ -338,6 +338,14 @@ footer {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    text-align: justify;
+}
+
+.parte1 p{
+    font-size: 20px;
+}
+.parte1 strong{
+    color: #1bbe72;
 }
 
 .parte2 {
@@ -350,4 +358,17 @@ footer {
 
 .parte2 img {
     width: 100%;
+    filter: drop-shadow(10px 0 30px #7EBFA1);
+    animation: flutuar 8s ease-in-out infinite;
 }
+
+@keyframes flutuar{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+}
+
+

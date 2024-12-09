@@ -33,16 +33,16 @@
                 <ul>
                     <div>
                         <span><img src="img/imagem-home.png" alt="imagem home"></span>
-                        <li class="nav-item"> <a href="index.html">Home</a></li>
+                        <li class="nav-item"> <a href="index.php">Home</a></li>
                     </div>
                     <div>
                         <span><img src="img/imagem-registro.png" alt="imagem registro"></span>
-                        <li class="nav-item"> <a href="cadaluno.html">Cadastrar Aluno</a></li>
+                        <li class="nav-item"> <a href="cadaluno.php">Cadastrar Aluno</a></li>
                         
                     </div>
                     <div>
                         <span><img src="img/imgem-usuario.png" alt="imagem usuario"></span>
-                        <li class="nav-item"> <a href="listaaluno.html">Lista de Alunos</a></li>
+                        <li class="nav-item"> <a href="listaaluno.php">Lista de Alunos</a></li>
                     </div>
 
                     <div>
