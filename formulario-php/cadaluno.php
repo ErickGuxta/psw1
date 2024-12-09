@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +16,7 @@
 
     <header>
         <div class="logo">
-            <h1>LOGO</h1>
+            <h1>PSW</h1>
         </div>
 
         <div class="sessao-direita-header">
@@ -137,83 +141,81 @@
 
                     <div class="grupo">
                         <div class="item-grupo">
-                            <label for="disciplinas">Disciplinas Cursadas</label>
+                            <label>Disciplinas Cursadas</label>
                             <div class="sub-itens">
                                 <div>
-                                    <input type="checkbox" id="disciplina1" name="disciplinas" value="PSW" >
+                                    <input type="checkbox" id="disciplina1" name="disciplinas[]" value="PSW" >
                                     <label for="disciplina1">PSW</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="disciplina2" name="disciplinas" value="BANCO DE DADOS" >
+                                    <input type="checkbox" id="disciplina2" name="disciplinas[]" value="BANCO DE DADOS" >
                                     <label for="disciplina2">Banco de Dados</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="disciplina2" name="disciplinas" value="BANCO DE DADOS">
-                                    <label for="disciplina2">Redes</label>
+                                    <input type="checkbox" id="disciplina3" name="disciplinas[]" value="REDES">
+                                    <label for="disciplina3">Redes</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="disciplina2" name="disciplinas" value="BANCO DE DADOS">
-                                    <label for="disciplina2">ASW</label>
+                                    <input type="checkbox" id="disciplina4" name="disciplinas[]" value="ASW">
+                                    <label for="disciplina4">ASW</label>
                                 </div>
                             </div>
                             <div class="sub-itens">
                                 <div>
-                                    <input type="checkbox" id="disciplina3" name="disciplinas" value="ASW">
-                                    <label for="disciplina3">Matemática</label>
+                                    <input type="checkbox" id="disciplina5" name="disciplinas[]" value="MATEMATICA">
+                                    <label for="disciplina5">Matemática</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="disciplina4" name="disciplinas" value="REDES">
-                                    <label for="disciplina4">Física</label>
+                                    <input type="checkbox" id="disciplina6" name="disciplinas[]" value="FISICA">
+                                    <label for="disciplina6">Física</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="disciplina4" name="disciplinas" value="REDES">
-                                    <label for="disciplina4">Português</label>
+                                    <input type="checkbox" id="disciplina7" name="disciplinas[]" value="PORTUGUES">
+                                    <label for="disciplina7">Português</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="disciplina4" name="disciplinas" value="REDES">
-                                    <label for="disciplina4">Química</label>
+                                    <input type="checkbox" id="disciplina8" name="disciplinas[]" value="QUIMICA">
+                                    <label for="disciplina8">Química</label>
                                 </div>
                             </div>
                         </div>
 
                         <div class="item-grupo">
-                            <label for="favoritas">Disciplinas Favoritas</label>
-
-
+                            <label>Disciplinas Favoritas</label>
                             <div class="sub-itens">
                                 <div>
-                                    <input type="checkbox" id="favorita1" name="favoritas" value="PSW">
-                                    <label for="favorita1" >PSW</label>
+                                    <input type="checkbox" id="favorita1" name="favoritas[]" value="PSW">
+                                    <label for="favorita1">PSW</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="favorita2" name="favoritas" value="ASW">
+                                    <input type="checkbox" id="favorita2" name="favoritas[]" value="BANCO DE DADOS">
                                     <label for="favorita2">Banco de Dados</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="favorita2" name="favoritas" value="ASW">
-                                    <label for="favorita2">Redes</label>
+                                    <input type="checkbox" id="favorita3" name="favoritas[]" value="REDES">
+                                    <label for="favorita3">Redes</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="favorita2" name="favoritas" value="ASW">
-                                    <label for="favorita2">ASW</label>
+                                    <input type="checkbox" id="favorita4" name="favoritas[]" value="ASW">
+                                    <label for="favorita4">ASW</label>
                                 </div>
                             </div>
                             <div class="sub-itens">
                                 <div>
-                                    <input type="checkbox" id="favorita3" name="favoritas" value="BANCO DE DADOS">
-                                    <label for="favorita3">Matemática</label>
+                                    <input type="checkbox" id="favorita5" name="favoritas[]" value="MATEMATICA">
+                                    <label for="favorita5">Matemática</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="favorita4" name="favoritas" value="REDES">
-                                    <label for="favorita4">Física</label>
+                                    <input type="checkbox" id="favorita6" name="favoritas[]" value="FISICA">
+                                    <label for="favorita6">Física</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="favorita4" name="favoritas" value="REDES">
-                                    <label for="favorita4">Português</label>
+                                    <input type="checkbox" id="favorita7" name="favoritas[]" value="PORTUGUES">
+                                    <label for="favorita7">Português</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="favorita4" name="favoritas" value="REDES">
-                                    <label for="favorita4">Química</label>
+                                    <input type="checkbox" id="favorita8" name="favoritas[]" value="QUIMICA">
+                                    <label for="favorita8">Química</label>
                                 </div>
                             </div>
                         </div>

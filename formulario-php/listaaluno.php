@@ -1,15 +1,51 @@
+<?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['limpar_sessao'])) {
+    session_unset(); // Remove todas as variáveis da sessão
+    session_destroy(); // Destroi a sessão
+    header("Location: listaaluno.php"); // Redireciona para a página atual
+    exit();
+}
+
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $aluno = [
+        'nome' => $_POST['nome'] ?? '',
+        'endereco' => $_POST['endereco'] ?? '',
+        'bairro' => $_POST['bairro'] ?? '',
+        'cidade' => $_POST['cidade'] ?? '',
+        'uf' => $_POST['uf'] ?? '',
+        'celular' => $_POST['celular'] ?? '',
+        'cpf' => $_POST['cpf'] ?? '',
+        'disciplinas' => isset($_POST['disciplinas']) ? $_POST['disciplinas'] : [],
+        'favoritas' => isset($_POST['favoritas']) ? $_POST['favoritas'] : []
+    ];
+
+    if (!isset($_SESSION['alunos'])) {
+        $_SESSION['alunos'] = [];
+    }
+    $_SESSION['alunos'][] = $aluno;
+
+    header("Location: listaaluno.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
     <title>Lista Alunos</title>
 </head>
+
 <body>
     <header>
         <div class="logo">
-            <h1>LOGO</h1>
+            <h1>PSW</h1>
         </div>
 
         <div class="sessao-direita-header">
@@ -38,7 +74,7 @@
                     <div>
                         <span><img src="img/imagem-registro.png" alt="imagem registro"></span>
                         <li class="nav-item"> <a href="cadaluno.php">Cadastrar Aluno</a></li>
-                        
+
                     </div>
                     <div>
                         <span><img src="img/imgem-usuario.png" alt="imagem usuario"></span>
@@ -55,7 +91,6 @@
 
         <main>
             <div class="conteudo-listaaluno">
-                <!-- <div class="titulo"><h2>LISTA DE INFORMAÇÕES DOS ALUNOS</h2></div> -->
                 <table class="tabela-informacoes">
                     <thead>
                         <tr>
@@ -71,48 +106,40 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Erick Gustavo Costa de Souza</td>
-                            <td>Rua Dom Bosco</td>
-                            <td>São Francisco</td>
-                            <td>Carinhanha</td>
-                            <td>BA</td>
-                            <td>77998094236</td>
-                            <td>86656505554</td>
-                            <td>PSW, BANCO DE DADOS, QUIMICA, MATEMATICA</td>
-                            <td>BANCO DE DADOS, PSW</td>
-                        </tr>
-                        <tr>
-                            <td>Erick Gustavo Costa de Souza</td>
-                            <td>Rua Dom Bosco</td>
-                            <td>São Francisco</td>
-                            <td>Carinhanha</td>
-                            <td>BA</td>
-                            <td>77998094236</td>
-                            <td>86656505554</td>
-                            <td>PSW, BANCO DE DADOS, QUIMICA, MATEMATICA</td>
-                            <td>BANCO DE DADOS, PSW</td>
-                        </tr>
-                        <tr>
-                            <td>Nome Completo</td>
-                            <td>Endereço</td>
-                            <td>Bairro</td>
-                            <td>Cidade</td>
-                            <td>UF</td>
-                            <td>Numero</td>
-                            <td>CPF</td>
-                            <td>Discp. Cursando</td>
-                            <td>Discp. Favorita</td>
-                        </tr>
-                    
+                        <?php if (!empty($_SESSION['alunos'])): ?>
+                            <?php foreach ($_SESSION['alunos'] as $aluno): ?>
+                                <tr>
+                                    <td><?php echo htmlspecialchars($aluno['nome']); ?></td>
+                                    <td><?php echo htmlspecialchars($aluno['endereco']); ?></td>
+                                    <td><?php echo htmlspecialchars($aluno['bairro']); ?></td>
+                                    <td><?php echo htmlspecialchars($aluno['cidade']); ?></td>
+                                    <td><?php echo htmlspecialchars($aluno['uf']); ?></td>
+                                    <td><?php echo htmlspecialchars($aluno['celular']); ?></td>
+                                    <td><?php echo htmlspecialchars($aluno['cpf']); ?></td>
+                                    <td><?php echo htmlspecialchars(implode(', ', $aluno['disciplinas'])); ?></td>
+                                    <td><?php echo htmlspecialchars(implode(', ', $aluno['favoritas'])); ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <tr>
+                                <td colspan="9">Nenhum aluno registrado.</td>
+                            </tr>
+                        <?php endif; ?>
                     </tbody>
                 </table>
+
+                <div class="botao-limpar-registros">
+                    <form action="listaaluno.php" method="post">
+                        <button type="submit" name="limpar_sessao">Limpar Registros</button>
+                    </form>
+                </div>
             </div>
         </main>
     </section>
 
     <footer>
-        <span>© 2024 CadAluno. Todos os direitos reservados.</span>
+        <span>©CadAluno. Todos os direitos reservados.</span>
     </footer>
 </body>
+
 </html>

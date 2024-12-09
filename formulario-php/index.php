@@ -10,7 +10,7 @@
 
     <header id="header-home">
         <div class="logo">
-            <h1>LOGO</h1>
+            <h1>PSW</h1>
         </div>
         <div class="logo">
             <h1>SISTEMA CADASTRO</h1>
@@ -65,8 +65,6 @@
                 <p>Simplifique a gestão dos seus alunos com nossa plataforma intuitiva e eficiente. Aqui, você pode cadastrar novos alunos e visualizar todos os registros em uma tabela organizada de forma rápida e prática.</p>
 
                 <h2>Por que escolher nosso sistema?</h2>
-
-                <p>Gerenciar informações de alunos nunca foi tão fácil. Nosso sistema foi desenvolvido pensando na praticidade e na eficiência, oferecendo ferramentas que facilitam o dia a dia de instituições educacionais, professores e administradores.</p>
                 <p>
                     <strong>Interface Amigável:</strong> Navegação simples e intuitiva, permitindo que qualquer pessoa, independentemente de seu nível de conhecimento técnico, possa utilizar o sistema com facilidade.
                     <br>

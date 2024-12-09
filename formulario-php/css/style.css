@@ -272,11 +272,13 @@ footer {
 
 .tabela-informacoes {
     width: 100%;
+    max-width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
     text-align: center;
     border-radius: 40px 40px 0 0;
     overflow: hidden;
+    table-layout: fixed;
 }
 
 .tabela-informacoes th {
@@ -306,7 +308,6 @@ footer {
     background-color: #1bbe72;
     color: #1f2428;
 }
-
 
 /* STYLE PARA HOME */
 
