@@ -117,7 +117,7 @@ if (isset($_POST['limpar_registros'])) {
                             <td>77998504236</td>
                             <td>530.029.845-68</td>
                             <td>PSW,REDES,ASW,BANCO DE DADOS</td>
-                            <td>MATEMATICA, PSW</td>
+                            <td>MATEMATICA PSW</td>
                         </tr>
                         <?php foreach ($alunos as $aluno): ?>
                             <tr>
