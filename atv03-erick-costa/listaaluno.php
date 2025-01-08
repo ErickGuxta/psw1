@@ -121,13 +121,13 @@ if (isset($_POST['limpar_registros'])) {
                         </tr>
                         <?php foreach ($alunos as $aluno): ?>
                             <tr>
-                                <td><?php echo htmlspecialchars($aluno['nome']); ?></td>
-                                <td><?php echo htmlspecialchars($aluno['endereco']); ?></td>
-                                <td><?php echo htmlspecialchars($aluno['bairro']); ?></td>
-                                <td><?php echo htmlspecialchars($aluno['cidade']); ?></td>
-                                <td><?php echo htmlspecialchars($aluno['uf']); ?></td>
-                                <td><?php echo htmlspecialchars($aluno['celular']); ?></td>
-                                <td><?php echo htmlspecialchars($aluno['cpf']); ?></td>
+                                <td><?php echo ($aluno['nome']); ?></td>
+                                <td><?php echo ($aluno['endereco']); ?></td>
+                                <td><?php echo ($aluno['bairro']); ?></td>
+                                <td><?php echo ($aluno['cidade']); ?></td>
+                                <td><?php echo ($aluno['uf']); ?></td>
+                                <td><?php echo ($aluno['celular']); ?></td>
+                                <td><?php echo ($aluno['cpf']); ?></td>
                                 <td><?php echo implode(', ', $aluno['disciplinas']); ?></td>
                                 <td><?php echo implode(', ', $aluno['favoritas']); ?></td>
                             </tr>
